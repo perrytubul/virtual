@@ -556,8 +556,12 @@ public class JoystickView extends View
      * Reset the button position to the center.
      */
     public void resetButtonPosition() {
-        mPosX = mCenterX;
-        mPosY = mCenterY;
+        ObjectAnimator.ofFloat(view, "translationX", "translationY",100f).apply {
+            duration = 1000
+        start()
+}
+//         mPosX = mCenterX;
+//         mPosY = mCenterY;
     }
 
 
